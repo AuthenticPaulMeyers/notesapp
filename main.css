@@ -1,0 +1,97 @@
+/* configure global variables */
+
+*{
+    font-family: Poppins, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    transition: .25s ease all;
+}
+
+body{
+    background: var(--primary-color);
+    padding: var(--padding-default);
+    color: var(--white-color);
+}
+
+
+:root{
+    --primary-color: #04050a;
+    --secondary-color: #5962e4;
+    --white-color: #e2e2e2;
+    --black-color: #131313;
+    --light-color: #222331;
+
+
+    --padding-default: .8rem 1.5rem;
+    --padding-small: .9rem 1.1rem;
+    --margin-default: .8rem 1.5rem;
+
+    --border-radius: 35px;
+    --border-radius-search: 65px;
+
+}
+
+.light-mode{
+    --primary-color: #f4f4f4;
+    --white-color: #04050a;
+    --light-color: #cccccc;
+}
+.padding{
+    padding: var(--padding-default);
+}
+.margin{
+    margin: var(--margin-default);
+}
+
+.border-radius{
+    border-radius: var(--border-radius);
+}
+.btn-primary{
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius-search);
+    padding: var(--padding-small);
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+.btn-primary:hover{
+    background: #4851ca;
+}
+
+.btn-primary:active{
+    background: #5962e4;
+}
+
+
+.input{
+    background: var(--light-color);
+    width: 300px;
+    height: 17px;
+    padding: var(--padding-small);
+    color: var(--black-color);
+    font-size: .9rem;
+    border-radius: var(--border-radius-search);
+    color: var(--white-color);
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-weight: lighter;
+}
+
+h1, h2, h3{
+    font-size: 1.5rem;
+}

@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Link to styles -->
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>My Notes</title>
 </head>
 <body>
-    
+
+    <!-- Heading -->
+	<header class="heading" style="text-align: center; margin-bottom: 40px;">
+		<h2>Create and save notes</h2>
+	</header>
+
+	<!-- Main container starts -->
+	<main class="main-container">
+		<!-- Left section starts -->
+		<section class="left-section">
+			<div class="button-container">
+				<button class="js-new-button new-button">+New note</button>
+			</div>
+			<div class="edit-box-container js-edit-box-container">
+				<div class="header">
+					<input type="text" value="Add title" class="js-add-title add-title">
+					<button class="js-cancel-button cancel-button">cancel</button>
+				</div>
+				<div class="edit-box js-edit-box">
+					<textarea class="edit-area"></textarea>
+					<button class="create-button">Create</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Center section starts -->
+		<section class="center-section">
+			<div class="heading">All Notes</div>
+			<div class="search-container">
+				<input type="search" name="search" class="search-box js-search-box" placeholder="Search">
+				<button class="search-button js-search-button">Search</button>
+			</div>
+			<div class="notes-list-container">
+				<div class="note-item js-note-item">
+					<div>
+						<h4>Title</h4>
+						<span>12:00</span>
+					</div>
+					<button class="delete-button js-delete-button">Trash</button>
+				</div>
+				<div class="note-item js-note-item">
+					<div>
+						<h4>Title</h4>
+						<span>12:00</span>
+					</div>
+					<button class="delete-button js-delete-button">Trash</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Right section starts -->
+		<section class="center-section">
+			<div class="heading">
+				<h3>Title</h3>
+				<button class="js-cancel-button">
+					Close
+				</button>
+			</div>
+			<div class="text-container">
+				<p>lorem ipsum lorem ipsum lorem ipsum this is dummy text</p>
+			</div>
+			<div class="action-buttons">
+				<button class="edit-button">Edit</button>
+				<button class="trash-button">Trash</button>
+			</div>
+
+		</section>
+
+	</main>
+
+
+
+
+
+    <!-- Link to external js file -->
+    <script src="./main.js" defer></script>
 </body>
 </html>
