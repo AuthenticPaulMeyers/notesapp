@@ -11,7 +11,7 @@
 <body>
 
     <!-- Heading -->
-	<header class="heading" style="text-align: center; margin-bottom: 40px;">
+	<header class="header ">
 		<h2>Create and save notes</h2>
 	</header>
 
@@ -19,23 +19,23 @@
 	<main class="main-container">
 		<!-- Left section starts -->
 		<section class="left-section">
-			<div class="button-container">
-				<button class="js-new-button new-button">+New note</button>
+			<div class="create-button">
+				<button class="js-new-button new-button btn-primary">New note</button>
 			</div>
-			<div class="edit-box-container js-edit-box-container">
+			<div class="edit-box-container border-radius js-edit-box-container">
 				<div class="header">
-					<input type="text" value="Add title" class="js-add-title add-title">
-					<button class="js-cancel-button cancel-button">cancel</button>
+					<input type="text" placeholder="Add title" class="js-add-title add-title">
+					<button class="js-cancel-button cancel-button">x</button>
 				</div>
 				<div class="edit-box js-edit-box">
-					<textarea class="edit-area"></textarea>
-					<button class="create-button">Create</button>
+					<textarea class="edit-area" placeholder="Add notes"></textarea>
+					<button class="create-button btn-primary">Create</button>
 				</div>
 			</div>
 		</section>
 
 		<!-- Center section starts -->
-		<section class="center-section">
+		<section class="center-section padding">
 			<div class="heading">All Notes</div>
 			<div class="search-container">
 				<input type="search" name="search" class="search-box js-search-box" placeholder="Search">
@@ -60,7 +60,7 @@
 		</section>
 
 		<!-- Right section starts -->
-		<section class="center-section">
+		<section class="right-section padding">
 			<div class="heading">
 				<h3>Title</h3>
 				<button class="js-cancel-button">

@@ -1,0 +1,74 @@
+.header > h2{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.button-container{
+    margin-bottom: 10px;
+}
+
+.edit-box-container{
+    height: 400px;
+    width: 350px;
+    background: var(--light-color);
+    margin-top: 10px;
+    position: relative;
+    padding: .4rem .6rem;
+    display: none;
+}
+
+.edit-box-container .header{
+    padding: .4rem .6rem;
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: .6rem;
+}
+
+.edit-box-container .header .add-title{
+    background: transparent;
+    font-size: 1rem;
+    color: var(--white-color);
+    width: 90%;
+}
+.edit-box-container .header .cancel-button{
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    cursor: pointer;
+    background: #cccccc;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.edit-box-container .edit-box{
+    width: 100%;
+    height: 100%;
+    padding: .3rem .6rem;  
+}
+
+.edit-box-container .edit-box .edit-area{
+    width: 100%;
+    height: 75%;
+    color: var(--white-color);
+    font-size:.9rem;
+    line-height: .9rem;
+    background: transparent;
+}
+
+.edit-box-container .edit-box .create-button{
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+
+}
+
+.edit-box-container .edit-box .btn-primary{
+    padding: .3rem .6rem;
+    font-size: .9rem;
+}
+
+.hidden{
+    display: block;
+}

@@ -26,16 +26,15 @@ body{
 
     --padding-default: .8rem 1.5rem;
     --padding-small: .9rem 1.1rem;
-    --margin-default: .8rem 1.5rem;
+    --margin-default: 2rem .8rem;
 
-    --border-radius: 35px;
+    --border-radius: 20px;
     --border-radius-search: 65px;
 
 }
 
 .light-mode{
     --primary-color: #f4f4f4;
-    --white-color: #04050a;
     --light-color: #cccccc;
 }
 .padding{
