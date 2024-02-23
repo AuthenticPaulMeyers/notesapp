@@ -18,7 +18,7 @@
 
 .edit-box-container .header{
     padding: .4rem .6rem;
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--white-color);
     margin-bottom: .6rem;
 }
 
@@ -27,11 +27,12 @@
     font-size: 1rem;
     color: var(--white-color);
     width: 90%;
+    font-weight: 400;
 }
 .edit-box-container .header .cancel-button{
     position: absolute;
-    top: 5px;
-    right: 6px;
+    top: -10px;
+    right: -4px;
     cursor: pointer;
     background: #cccccc;
     width: 30px;
@@ -53,6 +54,7 @@
     height: 75%;
     color: var(--white-color);
     font-size:.9rem;
+    font-weight: 300;
     line-height: 1.2rem;
     background: transparent;
     resize: none;
@@ -66,8 +68,9 @@
 }
 
 .edit-box-container .edit-box .btn-primary{
-    padding: .3rem .6rem;
+    padding: .4rem .7rem;
     font-size: .9rem;
+    font-weight: 400;
 }
 
 .hidden{

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to styles -->
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../left.css">
+    <link rel="stylesheet" href="../center.css">
     <title>My Notes</title>
 </head>
 <body>
@@ -20,12 +21,12 @@
 		<!-- Left section starts -->
 		<section class="left-section">
 			<div class="create-button">
-				<button class="js-new-button new-button btn-primary">New note</button>
+				<button class="js-new-button new-button btn-primary"><i class="fa-solid fa-pen-to-square"></i> New note</button>
 			</div>
 			<div class="edit-box-container border-radius js-edit-box-container">
 				<div class="header">
 					<input type="text" placeholder="Add title" class="js-add-title add-title">
-					<button class="js-cancel-button cancel-button">x</button>
+					<button class="js-cancel-button cancel-button"><i class="fa-solid fa-xmark"></i></button>
 				</div>
 				<div class="edit-box js-edit-box">
 					<textarea class="edit-area" placeholder="Add notes"></textarea>
@@ -85,5 +86,7 @@
 
     <!-- Link to external js file -->
     <script src="./main.js" defer></script>
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/b2be361a4a.js" crossorigin="anonymous"></script>
 </body>
 </html>
