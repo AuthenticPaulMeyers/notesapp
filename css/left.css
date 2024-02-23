@@ -30,6 +30,12 @@ body > .header{
     position: relative;
     padding: .4rem .6rem;
     display: none;
+    position: fixed;
+    top: 10rem;
+    left: 1.5rem;
+    z-index: 1000;
+
+
 }
 
 .edit-box-container .header{

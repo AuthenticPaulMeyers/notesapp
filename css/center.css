@@ -1,0 +1,78 @@
+.center-section .heading {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--light-color)
+}
+
+.center-section .search-container{
+    margin-bottom: 6px;
+}
+
+.notes-list-container,
+.text-container{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: .3rem;
+    overflow-y: scroll;  
+}
+
+.notes-list-container .note-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding: .3rem .4rem;
+    /* background: var(--light-color); */
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.notes-list-container .note-item:hover{
+    
+    background: #2a2b3b;
+}
+
+.notes-list-container .note-item:active{
+    background: #222331;
+}
+
+.note-item .title h4{
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+.note-item .title span{
+    font-weight: 100;
+    font-size: .7rem;
+}
+
+.note-item .delete-button{
+    background: transparent;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    color: var(--white-color)
+}
+
+.note-item .delete-button:hover{
+    background: var(--secondary-color)
+}
+.note-item .delete-button:active{
+    opacity: .9;
+}
+
+.notes-list-container .note-item:hover .delete-button{
+    right: 8px;
+}
