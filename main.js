@@ -56,6 +56,7 @@ function addNotes(){
                 title: title,
                 content: content,
                 time: myTime
+                
             });
         contentEl.value = '';
         titleEl.value = '';
@@ -83,7 +84,7 @@ function addHTML (){
         allNotes.forEach((notes, index) =>{
             const {title, time} = notes;
             const html = `
-                <div class="note-item js-note-item">
+                <div class="note-item js-note-item" data-note-title="${title}">
                     <div class="title">
                         <h4>${title}</h4>
                         <span>${time}</span>
@@ -120,29 +121,66 @@ function addZero(zero){
 // Variables
 let allNotesEl = document.querySelectorAll('.js-note-item');
 let parentViewContainer = document.querySelector('.view-container');
-
+let viewList = [];
+let viewListHTML = '';
 allNotesEl.forEach((noteItem) => {
     noteItem.addEventListener('click', () => {
-        displayNote();
-        // alert('clicked')
+        // displayNote();
+        const noteTitle = noteItem.dataset.noteTitle;
+        viewList.unshift({
+            noteTitle: noteTitle,
+        });
+        viewList.forEach((note) => {
+            const noteItemTitle = note.noteTitle;
+        
+            let matchingNote;
+        
+            allNotes.forEach((item) => {
+                if(item.title === noteItemTitle){
+                    matchingNote = item;
+                }
+            });
+        
+           viewListHTML += `
+                <div class="heading">
+                <h3>${matchingNote.title}</h3>
+                <button class="js-cancel-button cancel-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                </div>
+                <div class="text-container">
+                    <textarea class="js-view-note">${matchingNote.content}</textarea>
+                </div>
+                <div class="action-buttons">
+                    <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="trash-button js-trash-button"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            `;
+        });
+        parentViewContainer.innerHTML = viewListHTML;
+
     });
 });
 
+// getting the list note from the list container
+
+
 
 function displayNote(){
+    /*
     let appendHTML = '';
 
         allNotes.forEach((notes, index) =>{
             const {title, content} = notes;
             const html = `
             <div class="heading">
-                <h3>${title}</h3>
+                <h3>${title, index}</h3>
                 <button class="js-cancel-button cancel-button">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
             <div class="text-container">
-                <textarea class="js-view-note">${content}</textarea>
+                <textarea class="js-view-note">${content, index}</textarea>
             </div>
             <div class="action-buttons">
                 <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
@@ -162,5 +200,8 @@ function displayNote(){
 			});
 		});
         */
-    
+        allNotes.forEach((notes, index) =>{
+
+              console.log(notes, index);
+        });
 }
