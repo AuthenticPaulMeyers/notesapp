@@ -18,7 +18,8 @@
     justify-content: flex-start;
     flex-direction: column;
     padding-top: .3rem;
-    overflow-y: scroll;  
+    overflow-y: scroll;
+  
 }
 
 .notes-list-container .note-item{
@@ -32,6 +33,7 @@
     border-bottom: 1px solid var(--light-color);
     position: relative;
     overflow: hidden;
+    transition: all 0.2s ease;
 }
 
 .notes-list-container .note-item:hover{

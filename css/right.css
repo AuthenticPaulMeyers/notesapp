@@ -1,0 +1,73 @@
+.right-section{
+    background: var(--light-color);
+    /* display: none; */
+
+}
+.right-section .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white-color);
+    padding-bottom: .3rem;
+    
+}
+
+.right-section .heading h3{
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--white-color);
+}
+.right-section .text-container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .text-container textarea{
+    width:100%;
+    resize: none;
+    outline:none;
+    height: 100%;
+    overflow-y: scroll;
+    background: transparent;
+    color: var(--white-color);
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.2rem;
+    pointer-events: none;
+}
+
+.action-buttons{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.action-buttons .edit-button{
+    position: absolute;
+    bottom: -10px;
+    left: 8px;
+    color: var(--white-color);
+    font-size: 1.1rem;
+    background: transparent;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.action-buttons .trash-button{
+    position: absolute;
+    bottom: -10px;
+    font-weight: 200;
+    left: -15px;
+    color: var(--white-color);
+    font-size: 1.1rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.action-buttons .edit-button:hover,
+.action-buttons .trash-button:hover{
+    color: var(--secondary-color)
+}

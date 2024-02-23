@@ -51,7 +51,8 @@ body > .header{
     width: 90%;
     font-weight: 400;
 }
-.edit-box-container .header .cancel-button{
+.edit-box-container .header .cancel-button,
+.right-section .heading .cancel-button{
     position: absolute;
     top: -10px;
     right: -4px;
@@ -63,6 +64,11 @@ body > .header{
     border-radius: 30px;
     font-size: 1.1rem;
     color: var(--primary-color);
+}
+.edit-box-container .header .cancel-button:hover,
+.right-section .heading .cancel-button:hover{
+    background: var(--secondary-color);
+    color: var(--white-color);
 }
 
 .edit-box-container .edit-box{
