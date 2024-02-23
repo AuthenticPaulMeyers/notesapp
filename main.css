@@ -94,3 +94,15 @@ h5{
 h1, h2, h3{
     font-size: 1.5rem;
 }
+
+/* ----Custom Scroll Bar------ */
+::-webkit-scrollbar{
+    width: 7px;
+
+}
+::-webkit-scrollbar-thumb{
+    background: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 10px;
+    
+}

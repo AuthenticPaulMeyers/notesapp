@@ -53,8 +53,9 @@
     height: 75%;
     color: var(--white-color);
     font-size:.9rem;
-    line-height: .9rem;
+    line-height: 1.2rem;
     background: transparent;
+    resize: none;
 }
 
 .edit-box-container .edit-box .create-button{
