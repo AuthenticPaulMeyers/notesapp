@@ -1,7 +1,6 @@
 .right-section{
     background: var(--light-color);
-    /* display: none; */
-
+    display: none;
 }
 .right-section .heading{
     display: flex;
@@ -36,7 +35,6 @@
     font-weight: 300;
     font-size: .9rem;
     line-height: 1.2rem;
-    pointer-events: none;
 }
 
 .action-buttons{

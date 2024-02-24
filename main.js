@@ -65,13 +65,6 @@ function addNotes(){
     addHTML();
 }
 
-// Add Event keydown 'Enter' to save the content
-/*contentEl.addEventListener('keydown', (event) => {
-    if(event.key === 'Enter'){
-        addNotes();
-    }
-});*/
-
 // When the save is clicked
 saveButtonEl.addEventListener('click', () => {
     addNotes();
@@ -125,11 +118,17 @@ let viewList = [];
 let viewListHTML = '';
 allNotesEl.forEach((noteItem) => {
     noteItem.addEventListener('click', () => {
-        // displayNote();
+        parentViewContainer.style.display = 'block';
         const noteTitle = noteItem.dataset.noteTitle;
-        viewList.unshift({
-            noteTitle: noteTitle,
-        });
+
+        //if the list container has an item, clear it and add another one
+        if(viewList){
+            viewList = [];
+            viewList.unshift({
+                noteTitle: noteTitle,
+            });
+        }
+       
         viewList.forEach((note) => {
             const noteItemTitle = note.noteTitle;
         
@@ -140,68 +139,33 @@ allNotesEl.forEach((noteItem) => {
                     matchingNote = item;
                 }
             });
-        
-           viewListHTML += `
-                <div class="heading">
-                <h3>${matchingNote.title}</h3>
-                <button class="js-cancel-button cancel-button">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                </div>
-                <div class="text-container">
-                    <textarea class="js-view-note">${matchingNote.content}</textarea>
-                </div>
-                <div class="action-buttons">
-                    <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button class="trash-button js-trash-button"><i class="fa-solid fa-trash"></i></button>
-                </div>
-            `;
-        });
-        parentViewContainer.innerHTML = viewListHTML;
-
-    });
-});
-
-// getting the list note from the list container
-
-
-
-function displayNote(){
-    /*
-    let appendHTML = '';
-
-        allNotes.forEach((notes, index) =>{
-            const {title, content} = notes;
-            const html = `
+                    
+        viewListHTML = `
             <div class="heading">
-                <h3>${title, index}</h3>
-                <button class="js-cancel-button cancel-button">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+            <h3>${matchingNote.title}</h3>
+            <span>${matchingNote.time}</span>
+            <button class="js-cancel-btn cancel-button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             </div>
             <div class="text-container">
-                <textarea class="js-view-note">${content, index}</textarea>
+                <textarea class="js-view-note">${matchingNote.content}</textarea>
             </div>
             <div class="action-buttons">
                 <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
                 <button class="trash-button js-trash-button"><i class="fa-solid fa-trash"></i></button>
             </div>
-                `;
-            appendHTML = html;
-        });
+        `;
+               
+    });
+        parentViewContainer.innerHTML = viewListHTML;
 
-        parentViewContainer.innerHTML = appendHTML;
+        document.querySelector('.js-cancel-btn').addEventListener('click', () => {
+            parentViewContainer.style.display = 'none';
+        }); 
 
-		/*
-        document.querySelector('.js-trash-button').forEach((removeButton, index) => {
-			removeButton.addEventListener('click', () => {
-				allNotes.splice(index, 1);
-				addHTML();
-			});
-		});
-        */
-        allNotes.forEach((notes, index) =>{
+    });
+        
+});
 
-              console.log(notes, index);
-        });
-}
+// getting the list note from the list container
