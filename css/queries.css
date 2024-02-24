@@ -1,0 +1,81 @@
+/* Media queries
+Mobile first */
+@media(max-width: 440px){
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;;
+        column-gap: 0;
+        position: relative;
+    }
+    body > .header{
+        margin: 15px 0;    
+    }
+    .center-section{
+        padding: 0;
+        max-width: 100%;
+    }
+    .header > h2{
+        font-size: 1.1rem;
+    }
+    .left-section{
+        position: relative;
+    }
+    .create-button{
+        position: fixed;
+        bottom: 0;
+        right: 30%;
+        z-index: 22;
+    }
+    .edit-box-container{
+        position: fixed;
+        top: 0;
+        left: -333rem;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        margin: 0;
+        height: 100%;
+        transition: .3s ease-in-out;
+        width:95%;
+        padding-top: 10px;
+    }
+    .edit-box-container .header .cancel-button{      
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .right-section .heading .cancel-button{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+   
+    .edit-box-container .edit-box .create-button{
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    
+    }
+    .hidden{
+        left: 0;
+    }
+    .notes-list-container .note-item .delete-button{
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+    .right-section{
+        position: fixed;
+        right: -115rem;
+        bottom: 0;
+        top: 0;
+        border-radius: 0;
+        height: 100%;
+        max-width: 90%;
+        z-index: 2000;
+    
+    }
+    .active{
+        right: 0;
+    }
+}

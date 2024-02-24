@@ -118,7 +118,7 @@ let viewList = [];
 let viewListHTML = '';
 allNotesEl.forEach((noteItem) => {
     noteItem.addEventListener('click', () => {
-        parentViewContainer.style.display = 'block';
+        parentViewContainer.classList.add('active');
         const noteTitle = noteItem.dataset.noteTitle;
 
         //if the list container has an item, clear it and add another one
@@ -161,7 +161,7 @@ allNotesEl.forEach((noteItem) => {
         parentViewContainer.innerHTML = viewListHTML;
 
         document.querySelector('.js-cancel-btn').addEventListener('click', () => {
-            parentViewContainer.style.display = 'none';
+            parentViewContainer.classList.remove('active');
         }); 
 
     });

@@ -1,14 +1,26 @@
 .right-section{
     background: var(--light-color);
-    display: none;
+    position: fixed;
+    right: -115rem;
+    top: 9rem;
+    width: 450px;
+    height:400px;
+
 }
 .right-section .heading{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     border-bottom: 1px solid var(--white-color);
     padding-bottom: .3rem;
     
+}
+
+.right-section .heading span{
+    font-weight: 100;
+    font-size: .6rem;
+
 }
 
 .right-section .heading h3{
@@ -68,4 +80,7 @@
 .action-buttons .edit-button:hover,
 .action-buttons .trash-button:hover{
     color: var(--secondary-color)
+}
+.active{
+    right: 1.5rem;
 }

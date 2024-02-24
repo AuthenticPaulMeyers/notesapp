@@ -5,8 +5,7 @@ body > .header{
     position: relative;
     font-size: 1.3rem;
     font-weight: 600;
-    text-transform: uppercase; 
-      
+    text-transform: uppercase;     
 }
 .header > h2::before{
     content: '';
@@ -18,7 +17,7 @@ body > .header{
     border-radius: 10px;
     position: absolute;
 }
-.button-container{
+.create-button{
     margin-bottom: 10px;
 }
 
@@ -27,21 +26,19 @@ body > .header{
     width: 350px;
     background: var(--light-color);
     margin-top: 10px;
-    position: relative;
-    padding: .4rem .6rem;
-    display: none;
     position: fixed;
+    padding: .4rem .6rem;
     top: 10rem;
-    left: 1.5rem;
+    left: -333rem;
     z-index: 1000;
-
-
+    transition: .3s all ease;
 }
 
 .edit-box-container .header{
     padding: .4rem .6rem;
     border-bottom: 1px solid var(--white-color);
     margin-bottom: .6rem;
+    position: relative;
 }
 
 .edit-box-container .header .add-title{
@@ -93,7 +90,6 @@ body > .header{
     position: absolute;
     bottom: 4px;
     right: 6px;
-
 }
 
 .edit-box-container .edit-box .btn-primary{
@@ -103,5 +99,6 @@ body > .header{
 }
 
 .hidden{
-    display: block;
+    left: 1.5rem;
 }
+

@@ -1,3 +1,6 @@
+.center-section{
+    max-width: 440px;
+}
 .center-section .heading {
     font-weight: 400;
     font-size: 1.2rem;
