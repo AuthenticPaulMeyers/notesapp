@@ -17,6 +17,20 @@
     <!-- Heading -->
 	<header class="header ">
 		<h2>Create and save notes</h2>
+		<div class="menu">
+			<button class="hamburger-menu js-hamburger-menu">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</div>
+		<nav class="nav-list js-nav-list">
+			<li class="nav-item counter-notes"><i class="fa-solid fa-clipboard"></i>All Notes <span class="count-all-notes">(0)</span> </li>
+
+			<li class="nav-item"><i class="fa-solid fa-star"></i>Favorites <span class="count-favorites">(0)</span></li>
+
+			<li class="nav-item"><i class="fa-solid fa-bookmark"></i>Tags <span class="count-tags">(0)</span></li>
+			
+			<li class="nav-item settings"><i class="fa-solid fa-gear"></i> Settings</li>
+		</nav>
 	</header>
 
 	<!-- Main container starts -->
@@ -42,7 +56,7 @@
 		<section class="center-section padding">
 			<div class="heading">All Notes</div>
 			<div class="search-container">
-				<input auto-complete="off" type="search" name="search" class="search-box js-search-box input" placeholder="Search">
+				<input auto-complete="off" type="search" name="search" class="search-box js-search-box input" placeholder="Search" autocomplete="off">
 			</div>
 			<div class="notes-list-container">
                 

@@ -35,6 +35,12 @@ const myTime = `${hours}:${minutes}`;
 
 // create and object to keep the contents;
 let allNotes = JSON.parse(localStorage.getItem('Notes'));
+const notesCounterEl = document.querySelector('.count-all-notes');
+
+
+let notesCounter = allNotes.length;
+
+notesCounterEl.innerHTML = `(${notesCounter})`;
 
 if(!allNotes){
     allNotes = [];
@@ -152,7 +158,6 @@ allNotesEl.forEach((noteItem) => {
                 <textarea class="js-view-note">${matchingNote.content}</textarea>
             </div>
             <div class="action-buttons">
-                <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
                 <button class="trash-button js-trash-button"><i class="fa-solid fa-trash"></i></button>
             </div>
         `;
@@ -164,8 +169,34 @@ allNotesEl.forEach((noteItem) => {
             parentViewContainer.classList.remove('active');
         }); 
 
+        document.querySelectorAll('.js-trash-button').forEach((removeButton, index) => {
+			removeButton.addEventListener('click', () => {
+				allNotes.splice(index, 1);
+				addHTML();
+                parentViewContainer.classList.remove('active');
+
+			});
+		});
+
     });
         
 });
 
 // getting the list note from the list container
+
+
+
+// HAMBURGER MENU
+
+const menuBtn = document.querySelector('.js-hamburger-menu');
+const nav = document.querySelector('.js-nav-list');
+const icon = document.querySelector('.fa-bars');
+
+menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('show-nav');
+    if(icon.className === 'fa-solid fa-bars'){
+        icon.className = 'fa-solid fa-xmark';
+    }else{
+        icon.className = 'fa-solid fa-bars';
+    }
+});

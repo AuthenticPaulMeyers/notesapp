@@ -7,8 +7,34 @@ Mobile first */
         column-gap: 0;
         position: relative;
     }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     body > .header{
         margin: 15px 0;    
+    }
+    .header .menu .hamburger-menu{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        color: var(--white-color);
+        background: 0;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .header .menu .hamburger-menu:active{
+        
+        background: var(--light-color);
+    }
+    .header .menu .hamburger-menu i{
+        font-size: 1.1rem;
+        background: none;
     }
     .center-section{
         padding: 0;
@@ -23,8 +49,11 @@ Mobile first */
     .create-button{
         position: fixed;
         bottom: 0;
-        right: 30%;
+        right: 33%;
         z-index: 22;
+    }
+    .btn-primary{
+        font-size: .9rem;
     }
     .edit-box-container{
         position: fixed;
@@ -77,5 +106,50 @@ Mobile first */
     }
     .active{
         right: 0;
+    }
+
+    /* nav bar */
+    .nav-list{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -855px;
+        bottom: 0;
+        padding: 3.5rem 1rem;
+        z-index: 33333;
+        background-color: var(--light-color);
+        width: 60%;
+        align-items: center;
+
+    }
+
+    .nav-list .counter-notes{
+       border-bottom: 1px solid var(--white-color);
+       padding-bottom: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .nav-list .nav-item{
+        display: grid;
+        grid-template-columns: 20px 80px 20px;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 10px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-weight: 300;
+    }
+    .nav-list .nav-item i{
+        margin-right: 10px;
+        color: var(--secondary-color)
+    }
+
+    .nav-list .settings{
+        border-top: 1px solid var(--white-color);
+        padding-top: 10px;
+    }
+
+    .show-nav{
+        left: 0;
     }
 }

@@ -52,34 +52,31 @@
 .action-buttons{
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    left: -20px;
+    bottom: 35px;
+    z-index: 222;
+    width: 15%;
 }
 
-.action-buttons .edit-button{
-    position: absolute;
-    bottom: -10px;
-    left: 8px;
-    color: var(--white-color);
-    font-size: 1.1rem;
-    background: transparent;
-    font-weight: 200;
-    cursor: pointer;
-}
 
-.action-buttons .trash-button{
-    position: absolute;
-    bottom: -10px;
+.action-buttons .trash-button{   
     font-weight: 200;
-    left: -15px;
     color: var(--white-color);
-    font-size: 1.1rem;
+    font-size: .9rem;
     background: transparent;
     cursor: pointer;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    margin-right: 5px;
 }
 
 .action-buttons .edit-button:hover,
 .action-buttons .trash-button:hover{
-    color: var(--secondary-color)
+    background-color: var(--secondary-color);
+
 }
 .active{
     right: 1.5rem;
