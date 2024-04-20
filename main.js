@@ -38,13 +38,15 @@ let allNotes = JSON.parse(localStorage.getItem('Notes'));
 const notesCounterEl = document.querySelector('.count-all-notes');
 
 
-let notesCounter = allNotes.length;
-
-notesCounterEl.innerHTML = `(${notesCounter})`;
 
 if(!allNotes){
     allNotes = [];
 }
+
+let notesCounter = allNotes.length;
+
+notesCounterEl.innerHTML = `(${notesCounter})`;
+
 
 addHTML(); //Display the list by default
 
@@ -199,4 +201,15 @@ menuBtn.addEventListener('click', () => {
     }else{
         icon.className = 'fa-solid fa-bars';
     }
+});
+
+
+// -----------------search notes----------------
+const searchInputEl = document.querySelector('.js-search-box');
+const searchhValue = searchInputEl.value.toUpperCase();
+
+// add eventlistener to the search box
+searchInputEl.addEventListener('keyup', () =>{
+    // Declare variables
+  
 });
